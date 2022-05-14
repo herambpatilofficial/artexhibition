@@ -1,1 +1,1 @@
-web: gunicorn rimpactdj.esgi --log-file - 
+web: gunicorn rimpactdj.wsgi --log-file - 
