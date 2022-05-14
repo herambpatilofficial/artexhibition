@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}Art Gallery | RIMPACT 2022{% endblock title %}
+
+{% block body %} 
+<section class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-4xl text-5xl font-medium title-font mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">RIMPACT Art Gallery</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Art Gallery description</p>
+      </div>
+      <div class="flex flex-wrap -m-4 justify-items-center">
+       
+        {% for p in posts %}
+       <div class="lg:w-1/3 h-1/3 sm:w-1/2 h-1/2 p-4 border-blue-500">
+       <a href="post/{{p.title}}">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-scale-down object-center" src="Media/{{p.image}}">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">{{p.artist}}</h2>
+            <h1 class="title-font text-lg font-medium text-white mb-3">{{p.artists}}</h1>
+            <p class="leading-relaxed">{{p.description}}</p>
+          </div>
+        </div></a>
+      </div>
+
+       {%endfor %}
+    </div>
+    </div>
+  </section>
+<!--Video Gallery-->
+{% comment %} <div class="flex flex-col text-center w-full mb-20 bg-black">
+  <h1 class="sm:text-3xl text-4xl font-medium title-font mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Video Art Gallery</h1>
+  <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Video Art Gallery description</p>
+</div> {% endcomment %}
+
+  <section class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+      {% for v in vidposts %}
+        <div class="p-4 md:w-1/3">
+          <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+            <iframe width="90%" height="50%" src="{{v.videoLink}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="p-6">
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">{{v.artist}}</h2>
+              <h1 class="title-font text-lg font-medium text-white mb-3">{{v.title}}</h1>
+              <p class="leading-relaxed mb-3">{{v.description}}</p>
+              <div class="flex items-center flex-wrap ">
+                <a class="text-yellow-400 inline-flex items-center md:mb-2 lg:mb-0" href="{{v.socialLink}}">Follow {{v.artist}}
+                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        {%endfor %}
+
+      </div>
+    </div>
+  </section>
+
+  {% endblock body %}
