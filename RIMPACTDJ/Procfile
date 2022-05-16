@@ -1,1 +1,1 @@
-web: gunicorn rimpactdj.wsgi --log-file - 
+web: gunicorn RIMPACTDJ.wsgi --log-file - 
