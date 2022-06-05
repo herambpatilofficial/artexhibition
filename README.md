@@ -1,6 +1,11 @@
 # Django based Art Exhibition Website
 This Django site is made for creating a digital art exhibition where admin can upload various artforms in form of images and YouTube videos and they could be displayed in the art exhibition page where user can click on it and see it's artist's name, its enlarged view and follow that artist on its social media page.
 
+
+Link : https://pvgrimpactarts.herokuapp.com/gallery
+The images in the link above are not visible due to hosting it using FREE instance of Heroku :(
+
+
 for using this project install this in your virtual environment. I used pipenv
 Install requirements.txt from folder RIMPACTDJ
 You can straightaway do
