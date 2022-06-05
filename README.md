@@ -3,6 +3,7 @@ This Django site is made for creating a digital art exhibition where admin can u
 
 
 Link : https://pvgrimpactarts.herokuapp.com/gallery
+
 The images in the link above are not visible due to hosting it using FREE instance of Heroku :(
 
 
