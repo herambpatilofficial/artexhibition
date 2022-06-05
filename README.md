@@ -4,7 +4,9 @@ This Django site is made for creating a digital art exhibition where admin can u
 
 Link : https://pvgrimpactarts.herokuapp.com/gallery
 
-The images in the link above are not visible due to hosting it using FREE instance of Heroku :(
+The images in the link above are not visible due to hosting it using FREE instance of Heroku :( 
+
+Though you can help me with hosting it in a better way, and many more : https://www.buymeacoffee.com/Webulous
 
 
 for using this project install this in your virtual environment. I used pipenv
